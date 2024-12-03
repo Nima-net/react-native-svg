@@ -4,8 +4,9 @@ buildscript {
     // module dependency in an application project.
     if (project == rootProject) {
         repositories {
-            mavenCentral()
-            google()
+            maven { url "http://makhzanalhagh:8082/repository/test-I-group/"
+                allowInsecureProtocol = true 
+            }
         }
         
         dependencies {
@@ -76,9 +77,9 @@ android {
 }
 
 repositories {
-    mavenCentral()
-    mavenLocal()
-    google()
+    maven { url "http://makhzanalhagh:8082/repository/test-I-group/"
+        allowInsecureProtocol = true 
+    }
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
